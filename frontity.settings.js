@@ -2,9 +2,9 @@ const settings = {
   name: "opcina-djurmanec",
   state: {
     frontity: {
-      url: "https://test.frontity.org",
-      title: "Test Frontity Blog",
-      description: "WordPress installation for Frontity development",
+      url: "http://opcinadjurmanec.local/",
+      title: "Općina Đurmanec",
+      description: "Službena stranica Općine Đurmanec",
     },
   },
   packages: [
@@ -30,7 +30,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://test.frontity.org",
+          url: "http://opcinadjurmanec.local/",
         },
       },
     },

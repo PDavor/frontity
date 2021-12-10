@@ -5,22 +5,22 @@ import { connect } from "frontity";
 
 const Post = ({ state }) => {
   const data = state.source.get(state.router.link);
+  console.log("state router link", data);
   const post = state.source[data.type][data.id];
   const author = state.source.author[post.author];
 
   return (
-    <div>
-      <h2>{post.title.rendered}</h2>
-      <p>
-        <strong>Posted: </strong>
-        {post.date}
-      </p>
-      <p>
-        <strong>Author: </strong>
-        {author.name}
-      </p>
-      <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-    </div>
+    <>
+      <div className="container">
+        <h1 className="my-4">{post.title.rendered}</h1>
+        <span className="mb-4">Objavljeno: {post.date}</span>
+
+        <span className="mb-4">Autor: {author.name}</span>
+      </div>
+      <div className="container">
+        <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+      </div>
+    </>
   );
 };
 
