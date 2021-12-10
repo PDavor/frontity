@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Općina Đurmanec</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Sidebar  -->
+    <nav id="sidebar" class="bg-plava">
+      <div id="dismiss">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+      <div class="sidebar-header bg-plava border-bottom">
+        <h3>Izbornik</h3>
+      </div>
+      <ul class="list-unstyled components bg-plava">
+        <p>Općina Đurmanec</p>
+        <li>
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="justify-content-between d-flex"
+            >Početna <i class="fas fa-angle-down" style="margin-right: 0.5rem"></i></a
+          >
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+              <a href="#">Poveznica 1</a>
+            </li>
+            <li>
+              <a href="#">Poveznica 2</a>
+            </li>
+            <li>
+              <a href="#">Poveznica 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Poveznica 1</a>
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+            class="justify-content-between d-flex">Poveznica 2 <i class="fas fa-angle-down" style="margin-right: 0.5rem"></i></a
+          >
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a href="#">Poveznica 1</a>
+            </li>
+            <li>
+              <a href="#">Poveznica 2</a>
+            </li>
+            <li>
+              <a href="#">Poveznica 3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Poveznica 3</a>
+        </li>
+        <li>
+          <a href="#">Poveznica 4</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- sidebar kraj -->
+
+    <!-- glavna navigacija -->
+    <nav
+      class="navbar navbar-expand-lg bg-plava text-bijela"
+    >
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn bg-plava-tamnija text-bijela">
+          <i class="fas fa-align-left"></i>
+          <span>Izbornik</span>
+        </button>
+        <button
+          class="btn btn-dark d-inline-block d-lg-none ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-align-justify"></i>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-bijela" href="#">Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-bijela" href="#">Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-bijela" href="#">Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-bijela" href="#">Page</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="overlay"></div>
+    <!-- glavna navigacija kraj -->
+
+    <!-- slider pocetak -->
+    <div class="container-fluid p-0">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="http://placehold.jp/1024x300.png"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="http://placehold.jp/1024x300.png"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="http://placehold.jp/1024x300.png"
+              alt="Third slide"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- slider kraj -->
+
+    <!-- općinske vijesti -->
+    <div class="container py-4">
+      <h2 class="mb-4 text-plava font-weight-bold">OPĆINSKE VIJESTI</h2>
+      <div class="card-group">
+        <!-- kartica pocetak -->
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="http://placehold.jp/286x180.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <!-- kartica kraj -->
+        <!-- kartica pocetak -->
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="http://placehold.jp/286x180.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <!-- kartica kraj -->
+        <!-- kartica pocetak -->
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="http://placehold.jp/286x180.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        <!-- kartica kraj -->
+      </div>
+    </div>
+    <!-- općinske vijesti kraj -->
+
+    <!-- ostalo -->
+    <div class="container-fluid bg-secondary bg-opacity-10">
+      <div class="container pt-5 pb-4">
+        <!-- redak -->
+        <div class="row">
+          <!-- horizontalna kartica -->
+          <div class="col">
+         <div class="card mb-3 border-0 bg-transparent" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="http://placehold.jp/200x150.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-plava">Card title</h5>
+        <p class="card-text ">Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+          <!-- horizontalna kartica kraj-->
+          <!-- horizontalna kartica -->
+          <div class="col">
+          <div class="card mb-3 border-0 bg-transparent" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="http://placehold.jp/200x150.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-plava">Card title</h5>
+        <p class="card-text ">Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+          <!-- horizontalna kartica kraj-->
+          <!-- horizontalna kartica -->
+          <div class="col">
+          <div class="card mb-3 border-0 bg-transparent" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="http://placehold.jp/200x150.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-plava">Card title</h5>
+        <p class="card-text ">Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+          <!-- horizontalna kartica kraj-->
+        </div>
+        <!-- redak kraj -->
+        <!-- redak 2 -->
+        <div class="row">
+          <!-- horizontalna kartica -->
+          <div class="col">
+         <div class="card mb-3 border-0 bg-transparent" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="http://placehold.jp/200x150.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-plava">Card title</h5>
+        <p class="card-text ">Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+          <!-- horizontalna kartica kraj-->
+          <!-- horizontalna kartica -->
+          <div class="col">
+          <div class="card mb-3 border-0 bg-transparent" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="http://placehold.jp/200x150.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-plava">Card title</h5>
+        <p class="card-text ">Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+          <!-- horizontalna kartica kraj-->
+          <!-- horizontalna kartica -->
+          <div class="col">
+         <div class="card mb-3 border-0 bg-transparent" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="http://placehold.jp/200x150.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-plava">Card title</h5>
+        <p class="card-text ">Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+          <!-- horizontalna kartica kraj-->
+        </div>
+        <!-- redak 2 kraj -->
+      </div>
+    </div>
+    <!-- ostalo kraj -->
+
+    <!-- izdvojeno pitanja info -->
+    <div class="container py-4">
+      <div class="row">
+        <div class="col bg-plava text-light p-4">
+          <h3>Izdvojeno</h3>
+          <p class="text-light"><a href="#">Objave biračima </a></p>
+          <p class="text-light">
+            <a href="#">*Privremene regulacije prometa </a>
+          </p>
+          <p class="text-light">
+            <a href="#">*Natječaji / pozivi / javne rasprave </a>
+          </p>
+          <p class="text-light"><a href="#">*Javna nabava</a></p>
+        </div>
+        <div class="col bg-plava bg-opacity-75 text-light p-4">
+          <h3>Česta pitanja</h3>
+          <p class="text-light"><a href="#">+Zapošljavanje</a></p>
+          <p class="text-light">
+            <a href="#">*Zaštita žrtava obiteljskog nasilja</a>
+          </p>
+          <p class="text-light">
+            <a href="#">+Pravo na pristup informacijama</a>
+          </p>
+          <p class="text-light"><a href="#">+Zaštita osobnih podataka</a></p>
+        </div>
+        <div class="col bg-plava text-light p-4">
+          <h3>Info</h3>
+          <p class="text-light"><a href="#">+Oglasna ploča</a></p>
+          <p class="text-light"><a href="#">+Zagreb u brojkama</a></p>
+          <p class="text-light"><a href="#">+Građanska stanja</a></p>
+          <p class="text-light"><a href="#">+Gradsko glasilo</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- izdvojeno pitanja info kraj -->
+
+    <!-- moglo bi vas zanimati -->
+    <div class="container mb-4">
+      <h5 class="py-4 text-plava">MOGLO BI VAS ZANIMATI</h5>
+      <div class="row">
+        <div class="col">
+          <p><i class="fas fa-chevron-right"></i> Akti načelnika</p>
+          <p><i class="fas fa-chevron-right"></i> Geoportal</p>
+          <p><i class="fas fa-chevron-right"></i> Izbori</p>
+          <p><i class="fas fa-chevron-right"></i> Javna nabava</p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Stručno osposobljavanje za rad
+          </p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Priručnik o diskriminaciji i
+            mobbingu
+          </p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Antikorupcijsko povjerenstvo
+          </p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Unos planova proračunskih
+            korisnika
+          </p>
+        </div>
+        <div class="col">
+          <p><i class="fas fa-chevron-right"></i> Akti načelnika</p>
+          <p><i class="fas fa-chevron-right"></i> Geoportal</p>
+          <p><i class="fas fa-chevron-right"></i> Izbori</p>
+          <p><i class="fas fa-chevron-right"></i> Javna nabava</p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Stručno osposobljavanje za rad
+          </p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Priručnik o diskriminaciji i
+            mobbingu
+          </p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Antikorupcijsko povjerenstvo
+          </p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Unos planova proračunskih
+            korisnika
+          </p>
+        </div>
+        <div class="col">
+          <p><i class="fas fa-chevron-right"></i> Akti načelnika</p>
+          <p><i class="fas fa-chevron-right"></i> Geoportal</p>
+          <p><i class="fas fa-chevron-right"></i> Izbori</p>
+          <p><i class="fas fa-chevron-right"></i> Javna nabava</p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Stručno osposobljavanje za rad
+          </p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Priručnik o diskriminaciji i
+            mobbingu
+          </p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Antikorupcijsko povjerenstvo
+          </p>
+          <p>
+            <i class="fas fa-chevron-right"></i> Unos planova proračunskih
+            korisnika
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- moglo bi vas zanimati kraj -->
+    <!-- footer -->
+    <div class="container-fluid pt-4 bg-secondary bg-opacity-10">
+      <footer class="container">
+        <div class="row p-4">
+          <div class="col">
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="assets/img/grb.png" alt="Grb" style="width: 80px;height:110px"/>
+              </div>
+              <div class="col-sm-9">
+                <span class="font-weight-bold">Općina Đurmanec</span><br />
+                Đurmanec 137 <br />
+                49225 Đurmanec
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <span class="font-weight-bold">IBAN:</span>
+            HR92 2340009-1810800005<br />
+            <span class="font-weight-bold">Matični broj:</span> 64964131342<br />
+            <span class="font-weight-bold">OIB:</span> 123456789123
+          </div>
+          <div class="col">
+            <span class="font-weight-bold">Centrala općine:</span> 049/346-326 <br />
+            <span class="font-weight-bold">Mail općine:</span> opcina@djurmanec.hr
+          </div>
+        </div>
+        <div class="row p-4">
+          <div class="col text-center">
+            Izjava o pristupačnosti | Press | Mapa weba | Impressum | Uvjeti
+            korištenja | Uredništvo | Webmail
+          </div>
+        </div class="col">
+        <div class="row"><p class="text-center text-dark">Sva prava pridržana © 2021. Općina Đurmanec.</p></div>
+        </div>
+      </footer>
+    </div>
+    <!-- footer kraj -->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper.JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+          theme: "minimal",
+        });
+
+        $("#dismiss, .overlay").on("click", function () {
+          $("#sidebar").removeClass("active");
+          $(".overlay").removeClass("active");
+        });
+
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar").addClass("active");
+          $(".overlay").addClass("active");
+          $(".collapse.in").toggleClass("in");
+          $("a[aria-expanded=true]").attr("aria-expanded", "false");
+        });
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/84e5bfb9c6.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
