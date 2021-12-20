@@ -1,38 +1,28 @@
 // File: /packages/my-first-theme/src/components/index.js
 import React from "react";
 import { connect, Global, css } from "frontity";
-import Link from "@frontity/components/link";
 import Switch from "@frontity/components/switch";
 import List from "./list";
 import Post from "./post";
 import Page from "./page";
 import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
-import customCss from "./style.css";
 import Nav from "./Nav";
-import Slider from "./Slider";
-import Vijesti from "./Vijesti";
-import Ostalo from "./Ostalo";
-import Izdvojeno from "./Izdvojeno";
 import Dno from "./Dno";
-import Sidebar from "./Sidebar";
+import customCSS from "./style.css";
 const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
   return (
     <>
       <Global styles={css(bootstrap)} />
-      <Global styles={css(customCss)} />
-      {/* <Sidebar /> */}
+      <Global styles={css(customCSS)} />
       <Nav />
       <Switch>
         <List when={data.isArchive} />
         <Post when={data.isPost} />
         <Page when={data.isPage} />
       </Switch>
-      {/* <Slider /> */}
-      {/* <Vijesti /> */}
-      {/* <Ostalo /> */}
-      {/* <Izdvojeno /> */}
       <Dno />
+
       {/* <h1>Hello Frontity</h1>
       <p>Current URL: {state.router.link}</p> */}
       {/* <nav>

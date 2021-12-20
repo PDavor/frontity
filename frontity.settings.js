@@ -12,13 +12,7 @@ const settings = {
       name: "my-first-theme",
       state: {
         theme: {
-          menu: [
-            ["Home", "/"],
-            ["Nature", "/category/nature/"],
-            ["Travel", "/category/travel/"],
-            ["Japan", "/tag/japan/"],
-            ["About Us", "/about-us/"],
-          ],
+          menu: [],
           featured: {
             showOnList: false,
             showOnPost: false,

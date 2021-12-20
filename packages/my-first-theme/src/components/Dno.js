@@ -1,6 +1,10 @@
 import React from "react";
 import grb from "./assets/img/grb.png";
-const Dno = () => {
+import { connect } from "frontity";
+import Link from "@frontity/components/link";
+const Dno = ({ state }) => {
+  const footerMenu = state.source.get(`/menu/${state.theme.footerUrl}/`).items;
+
   return (
     <>
       {/* <!-- moglo bi vas zanimati --> */}
@@ -95,8 +99,11 @@ const Dno = () => {
           </div>
           <div className="row p-4">
             <div className="col text-center">
-              Izjava o pristupačnosti | Press | Mapa weba | Impressum | Uvjeti
-              korištenja | Uredništvo | Webmail
+              {footerMenu.map((item) => (
+                <React.Fragment key={item.url}>
+                  <Link link={item.url}>{item.title}</Link> |{" "}
+                </React.Fragment>
+              ))}
             </div>
           </div>
           <div className="col">
@@ -113,4 +120,4 @@ const Dno = () => {
   );
 };
 
-export default Dno;
+export default connect(Dno);

@@ -8,7 +8,6 @@ import Ostalo from "./Ostalo";
 import Izdvojeno from "./Izdvojeno";
 const List = ({ state }) => {
   const data = state.source.get(state.router.link);
-  console.log("post data", data);
   {
     /* <Vijesti /> */
   }
