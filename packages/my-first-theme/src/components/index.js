@@ -1,5 +1,5 @@
 // File: /packages/my-first-theme/src/components/index.js
-import React from "react";
+import React, { useEffect } from "react";
 import { connect, Global, css, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import List from "./list";
@@ -13,18 +13,19 @@ import { Helmet } from "react-helmet";
 
 const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
+  useEffect(() => {
+    <script>
+      {(function (d) {
+        var s = d.createElement("script");
+        s.setAttribute("data-account", "gf0cNVno4T");
+        s.setAttribute("src", "https://accessibilityserver.org/widget.js");
+        (d.body || d.head).appendChild(s);
+      })(document)}
+    </script>;
+  }, []);
   return (
     <>
-      <Helmet>
-        <script>
-          {(function (d) {
-            var s = d.createElement("script");
-            s.setAttribute("data-account", "gf0cNVno4T");
-            s.setAttribute("src", "https://accessibilityserver.org/widget.js");
-            (d.body || d.head).appendChild(s);
-          })(document)}
-        </script>
-      </Helmet>
+      <Helmet></Helmet>
       <Head>
         <title>{state.frontity.title}</title>
         <meta name="description" content={state.frontity.description} />
