@@ -2,38 +2,84 @@
 
 /* custom colors */
 :root {
+  --siva: #414756;
+  --siva-svijetla: #a5abbd;
   --bijela: #fff;
-  --plava: #6699cc;
-  --plava-tamnija: #4482c1;
+  --plava: #2483e5;
+  --plava-tamna: #0049a1;
+  --sekundarna: #4baba4;
+}
+/* navigacija stilovi */
+.navigacija {
+  background-color: var(--plava-tamna);
+  text-transform: uppercase;
+}
+.nav-link {
+  color: var(--bijela) !important;
+}
+.navbar-brand {
+  color: var(--bijela) !important;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
-.bg-plava {
-  background-color: var(--plava) !important;
+/* offcanvas navigacija */
+.offcanvas {
+  background-color: var(--plava-tamna);
+  max-width: 300px;
+}
+.offcanvas-title {
+  color: var(--bijela);
+}
+.link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.link:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.link2 {
+  border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.link2:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+hr:not([size]) {
+  height: 4px;
+  color: var(--bijela);
+  margin: 25 0 25 0;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.3em;
+  vertical-align: middle;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+  float: right;
+  margin-top: 8px;
 }
 
-.bg-plava-tamnija {
-  background-color: var(--plava-tamnija) !important;
+/* izdvojeno */
+.izdvojeno {
+  background-color: var(--plava);
 }
-
-.text-bijela {
-  color: white !important;
-}
-
-.text-plava {
-  color: var(--plava);
-}
-
 body {
-  font-family: "Poppins", sans-serif;
-  background: #fafafa;
+  font-family: "Tahoma", sans-serif;
+  background: var(--bijela);
+  margin: 0;
+  height: 100%;
 }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Tahoma", sans-serif;
   font-size: 1.1em;
   font-weight: 300;
   line-height: 1.7em;
-  color: #999;
+  color: var(--siva-svijetla);
 }
 
 a,
@@ -55,4 +101,26 @@ a:focus {
     height: 15vw;
     object-fit: cover;
   }
+}
+
+/* scrollbar */
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--siva-svijetla) #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--siva-svijetla);
+  border: 3px none var(--siva-svijetla);
 }

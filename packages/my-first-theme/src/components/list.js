@@ -6,17 +6,11 @@ import Link from "@frontity/components/link";
 import Slider from "./Slider";
 import Ostalo from "./Ostalo";
 import Izdvojeno from "./Izdvojeno";
+import FeaturedMedia from "./featured-media";
+
 const List = ({ state }) => {
   const data = state.source.get(state.router.link);
-  {
-    /* <Vijesti /> */
-  }
-  {
-    /* <Ostalo /> */
-  }
-  {
-    /* <Izdvojeno /> */
-  }
+
   return (
     <>
       <Slider />
@@ -26,6 +20,7 @@ const List = ({ state }) => {
         <div className="row">
           {data.items.slice(0, 6).map((item) => {
             const post = state.source[item.type][item.id];
+            console.log("posts", post);
             return (
               <div
                 className="col-sm-4"
@@ -34,10 +29,13 @@ const List = ({ state }) => {
               >
                 <Link key={item.id} link={post.link}>
                   <div className="card">
-                    <img
-                      className="card-img-top"
-                      src="http://placehold.jp/200x150.png"
-                      alt="Card image cap"
+                    <FeaturedMedia
+                      id={post.featured_media}
+                      style={{
+                        height: " 300px",
+                        width: "100%",
+                        objectFit: "cover",
+                      }}
                     />
                     <div className="card-body">
                       <p className="card-text">{post.title.rendered}</p>

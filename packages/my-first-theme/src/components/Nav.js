@@ -13,8 +13,8 @@ const Navigation = ({ state }) => {
   const leftMenu = state.source.get(`/menu/${state.theme.leftUrl}/`).items;
   return (
     <>
-      <Navbar bg="light" expand={false} sticky="top">
-        <Container fluid>
+      <Navbar expand={false} sticky="top" className="navigacija">
+        <Container>
           <Navbar.Brand>
             <Link link="/">
               <Image src={Logo} height={70} />
@@ -64,15 +64,24 @@ const Navigation = ({ state }) => {
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 {mainMenu.map((item) =>
                   !item.child_items ? (
-                    <Link link={item.url} className={`nav-link`} key={item.url}>
+                    <Link
+                      link={item.url}
+                      className={`nav-link link`}
+                      key={item.url}
+                    >
                       {item.title}
                     </Link>
                   ) : (
-                    <NavDropdown title={item.title} id={item.id} key={item.url}>
+                    <NavDropdown
+                      title={item.title}
+                      id={item.id}
+                      key={item.url}
+                      className={`link`}
+                    >
                       {item.child_items.map((child) => (
                         <Link
                           link={child.url}
-                          className={`dropdown-item`}
+                          className={`dropdown-item link`}
                           key={child.url}
                         >
                           {child.title}
@@ -81,18 +90,27 @@ const Navigation = ({ state }) => {
                     </NavDropdown>
                   )
                 )}
-                <hr className={`w-100 `} />
+                <hr className={`w-100 `} className="hr" />
                 {leftMenu.map((item) =>
                   !item.child_items ? (
-                    <Link link={item.url} className={`nav-link`} key={item.url}>
+                    <Link
+                      link={item.url}
+                      className={`nav-link link2`}
+                      key={item.url}
+                    >
                       {item.title}
                     </Link>
                   ) : (
-                    <NavDropdown title={item.title} id={item.id} key={item.url}>
+                    <NavDropdown
+                      title={item.title}
+                      id={item.id}
+                      key={item.url}
+                      className={`link2`}
+                    >
                       {item.child_items.map((child) => (
                         <Link
                           link={child.url}
-                          className={`dropdown-item`}
+                          className={`dropdown-item link2`}
                           key={child.url}
                         >
                           {child.title}
