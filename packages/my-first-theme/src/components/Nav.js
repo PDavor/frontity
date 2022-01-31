@@ -90,7 +90,7 @@ const Navigation = ({ state }) => {
                     </NavDropdown>
                   )
                 )}
-                <hr className={`w-100 `} className="hr" />
+                <div style={{ height: "40px" }} />
                 {leftMenu.map((item) =>
                   !item.child_items ? (
                     <Link

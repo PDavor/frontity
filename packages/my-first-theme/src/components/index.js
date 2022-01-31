@@ -4,12 +4,10 @@ import { connect, Global, css, Head } from "frontity";
 import Switch from "@frontity/components/switch";
 import List from "./list";
 import Post from "./post";
-import Page from "./page";
 import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./Nav";
 import Dno from "./Dno";
 import customCSS from "./style.css";
-import { Helmet } from "react-helmet";
 
 const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
@@ -25,7 +23,6 @@ const Root = ({ state, actions }) => {
   }, []);
   return (
     <>
-      <Helmet></Helmet>
       <Head>
         <title>{state.frontity.title}</title>
         <meta name="description" content={state.frontity.description} />
