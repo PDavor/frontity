@@ -124,3 +124,17 @@ a:focus {
   background-color: var(--siva-svijetla);
   border: 3px none var(--siva-svijetla);
 }
+
+.some-image {
+  animation-name: example;
+  animation-duration: 5s;
+}
+
+@keyframes example {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

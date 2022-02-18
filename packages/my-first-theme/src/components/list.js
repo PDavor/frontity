@@ -47,8 +47,8 @@ const List = ({ state }) => {
           })}
         </div>
       </div>
-      <Ostalo />
-      <Izdvojeno />
+      {/* <Ostalo />
+      <Izdvojeno /> */}
     </>
   );
 };

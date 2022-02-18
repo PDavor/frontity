@@ -12,46 +12,70 @@ const Dno = ({ state }) => {
         <h5 className="py-4 text-plava">VAŽNIJE POVEZNICE</h5>
         <div className="row">
           <div className="col-sm-12 col-md-4">
-            <p>
-              <i className="fas fa-chevron-right"></i> Akti načelnika
-            </p>
-            <p>
-              <i className="fas fa-chevron-right"></i> Geoportal
-            </p>
-            <p>
-              <i className="fas fa-chevron-right"></i> Izbori
-            </p>
-            <p>
-              <i className="fas fa-chevron-right"></i> Javna nabava
-            </p>
+            {footerMenu
+              .filter(
+                (footerItem, index) =>
+                  index === 0 ||
+                  index === 3 ||
+                  index === 6 ||
+                  index === 9 ||
+                  index === 12 ||
+                  index === 15 ||
+                  index === 18
+              )
+              .map((item) => (
+                <React.Fragment key={item.url}>
+                  <p>
+                    <Link link={item.url}>
+                      <i className="fas fa-chevron-right"></i> {item.title}
+                    </Link>
+                  </p>
+                </React.Fragment>
+              ))}
           </div>
           <div className="col-sm-12 col-md-4">
-            <p>
-              <i className="fas fa-chevron-right"></i> Akti načelnika
-            </p>
-            <p>
-              <i className="fas fa-chevron-right"></i> Geoportal
-            </p>
-            <p>
-              <i className="fas fa-chevron-right"></i> Izbori
-            </p>
-            <p>
-              <i className="fas fa-chevron-right"></i> Javna nabava
-            </p>
+            {footerMenu
+              .filter(
+                (footerItem, index) =>
+                  index === 1 ||
+                  index === 4 ||
+                  index === 7 ||
+                  index === 10 ||
+                  index === 13 ||
+                  index === 16 ||
+                  index === 19
+              )
+              .map((item) => (
+                <React.Fragment key={item.url}>
+                  <p>
+                    <Link link={item.url}>
+                      <i className="fas fa-chevron-right"></i> {item.title}
+                    </Link>
+                  </p>
+                </React.Fragment>
+              ))}
           </div>
           <div className="col-sm-12 col-md-4">
-            <p>
-              <i className="fas fa-chevron-right"></i> Akti načelnika
-            </p>
-            <p>
-              <i className="fas fa-chevron-right"></i> Geoportal
-            </p>
-            <p>
-              <i className="fas fa-chevron-right"></i> Izbori
-            </p>
-            <p>
-              <i className="fas fa-chevron-right"></i> Javna nabava
-            </p>
+            {footerMenu
+              .filter(
+                (footerItem, index) =>
+                  index === 2 ||
+                  index === 5 ||
+                  index === 8 ||
+                  index === 11 ||
+                  index === 14 ||
+                  index === 17 ||
+                  index === 20
+              )
+              .map((item) => (
+                <React.Fragment key={item.url}>
+                  <p>
+                    <Link link={item.url}>
+                      <i className="fas fa-chevron-right"></i> {item.title}
+                    </Link>
+                  </p>
+                </React.Fragment>
+              ))}
           </div>
         </div>
       </div>
@@ -97,19 +121,12 @@ const Dno = ({ state }) => {
               </a>
             </div>
           </div>
-          <div className="row p-4">
-            <div className="col text-center">
-              {footerMenu.map((item) => (
-                <React.Fragment key={item.url}>
-                  <Link link={item.url}>{item.title}</Link> |{" "}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
+          <div className="row p-4"></div>
           <div className="col">
             <div className="row">
               <p className="text-center text-dark">
-                Sva prava pridržana © 2021. Općina Đurmanec.
+                Sva prava pridržana © {new Date().getFullYear()}. Općina
+                Đurmanec.
               </p>
             </div>
           </div>
