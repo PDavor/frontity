@@ -62,7 +62,7 @@ const Navigation = ({ state }) => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                {mainMenu.map((item) =>
+                {/* {mainMenu.map((item) =>
                   !item.child_items ? (
                     <Link
                       link={item.url}
@@ -89,7 +89,7 @@ const Navigation = ({ state }) => {
                       ))}
                     </NavDropdown>
                   )
-                )}
+                )} */}
                 <div style={{ height: "40px" }} />
                 {leftMenu.map((item) =>
                   !item.child_items ? (

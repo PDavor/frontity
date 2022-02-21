@@ -2,7 +2,7 @@ const settings = {
   name: "opcina-djurmanec",
   state: {
     frontity: {
-      url: "http://opcinadjurmanec.local/",
+      url: "https://opcina.000webhostapp.com/",
       title: "Općina Đurmanec",
       description: "Službena stranica Općine Đurmanec",
     },
