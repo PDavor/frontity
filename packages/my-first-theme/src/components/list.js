@@ -21,7 +21,7 @@ const List = ({ state }) => {
         <div className="row">
           {data.items.slice(0, 6).map((item) => {
             const post = state.source[item.type][item.id];
-            console.log("posts", post);
+
             return (
               <div
                 className="col-sm-4"

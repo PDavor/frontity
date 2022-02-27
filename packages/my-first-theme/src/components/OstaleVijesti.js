@@ -6,9 +6,9 @@ import Link from "@frontity/components/link";
 import Slider from "./Slider";
 import Ostalo from "./Ostalo";
 import Izdvojeno from "./Izdvojeno";
-
-const List = ({ state }) => {
+const List = ({ state, libraries }) => {
   const data = state.source.get(state.router.link);
+  const Html2React = libraries.html2react.Component;
 
   return (
     <>
@@ -18,6 +18,9 @@ const List = ({ state }) => {
         <div className="row">
           {data.items.slice(0, 6).map((item) => {
             const post = state.source[item.type][item.id];
+            const exc = post.excerpt.rendered
+              .replace(/<\/?[^>]+(>|$)/g, "")
+              .slice(0, 90);
             console.log("posts", post);
             return (
               <div
@@ -29,6 +32,11 @@ const List = ({ state }) => {
                   <div className="card">
                     <div className="card-body">
                       <p className="card-text">{post.title.rendered}</p>
+                      {post.excerpt && (
+                        <div className="card-text">
+                          <Html2React html={exc.slice(0, -1) + ".."} />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Link>
