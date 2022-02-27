@@ -14,8 +14,6 @@ const Post = ({ state }) => {
   const post = state.source[data.type][data.id];
   const author = state.source.author[post.author];
   const formattedDate = dayjs(post.date).format("DD.MM.YYYY");
-
-  console.log("post", post);
   return (
     <Container>
       <Row>

@@ -24,7 +24,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "http://opcinadjurmanec.local/",
+          url: "https://opcina.000webhostapp.com/",
         },
       },
     },

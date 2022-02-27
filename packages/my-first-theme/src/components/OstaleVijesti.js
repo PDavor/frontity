@@ -6,18 +6,15 @@ import Link from "@frontity/components/link";
 import Slider from "./Slider";
 import Ostalo from "./Ostalo";
 import Izdvojeno from "./Izdvojeno";
-import FeaturedMedia from "./featured-media";
-import OstaleVijesti from "./OstaleVijesti";
-import dayjs from "dayjs";
+
 const List = ({ state }) => {
   const data = state.source.get(state.router.link);
-  console.log(data);
+
   return (
     <>
-      <Slider />
       {/* vijesti */}
       <div className="container py-4">
-        <h2 className="mb-4 text-plava font-weight-bold">Izdvojeno</h2>
+        <h2 className="mb-4 text-plava font-weight-bold">Ostale vijesti</h2>
         <div className="row">
           {data.items.slice(0, 6).map((item) => {
             const post = state.source[item.type][item.id];
@@ -30,34 +27,14 @@ const List = ({ state }) => {
               >
                 <Link key={item.id} link={post.link}>
                   <div className="card">
-                    <FeaturedMedia
-                      id={post.featured_media}
-                      style={{
-                        height: " 300px",
-                        width: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
                     <div className="card-body">
-                      <div className="row">
-                        <div className="col">
-                          <p className="card-text">{post.title.rendered}</p>
-                        </div>
-                        <div className="col" style={{ textAlign: "end" }}>
-                          <p className="card-text">
-                            {dayjs(post.date).format("DD.MM.YYYY")}
-                          </p>
-                        </div>
-                      </div>
+                      <p className="card-text">{post.title.rendered}</p>
                     </div>
                   </div>
                 </Link>
               </div>
             );
           })}
-        </div>
-        <div className="row">
-          <OstaleVijesti />
         </div>
       </div>
       {/* <Ostalo />
