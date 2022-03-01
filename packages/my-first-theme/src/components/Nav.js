@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "frontity";
 import Link from "@frontity/components/link";
 import Navbar from "react-bootstrap/Navbar";
@@ -11,6 +11,10 @@ import Logo from "./assets/img/samoGrb.png";
 const Navigation = ({ state }) => {
   const mainMenu = state.source.get(`/menu/${state.theme.menuUrl}/`).items;
   const leftMenu = state.source.get(`/menu/${state.theme.leftUrl}/`).items;
+  const [show, setShow] = useState(false);
+  const handleClose = () => {
+    setShow(false);
+  };
   return (
     <>
       <Navbar expand={false} sticky="top" className="navigacija">
@@ -21,7 +25,10 @@ const Navigation = ({ state }) => {
               Općina Đurmanec
             </Link>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="offcanvasNavbar" />
+          <Navbar.Toggle
+            aria-controls="offcanvasNavbar"
+            onClick={() => setShow(true)}
+          />
           <Navbar
             id="responsive-navbar-nav"
             className={`d-none d-lg-block m-auto`}
@@ -53,6 +60,8 @@ const Navigation = ({ state }) => {
             id="sidebar"
             aria-labelledby="offcanvasNavbarLabel"
             placement="start"
+            show={show}
+            onHide={handleClose}
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
@@ -97,6 +106,7 @@ const Navigation = ({ state }) => {
                       link={item.url}
                       className={`nav-link link2`}
                       key={item.url}
+                      onClick={handleClose}
                     >
                       {item.title}
                     </Link>
@@ -112,6 +122,7 @@ const Navigation = ({ state }) => {
                           link={child.url}
                           className={`dropdown-item link2`}
                           key={child.url}
+                          onClick={handleClose}
                         >
                           {child.title}
                         </Link>
