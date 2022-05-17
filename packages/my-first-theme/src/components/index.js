@@ -8,6 +8,7 @@ import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./Nav";
 import Dno from "./Dno";
 import customCSS from "./style.css";
+import Category from "./category";
 
 const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
@@ -33,8 +34,10 @@ const Root = ({ state, actions }) => {
       <Global styles={css(customCSS)} />
       <Nav />
       <Switch>
-        <List when={data.isArchive} />
+        <List when={data.isHome} />
+        <Category when={data.isCategory} />
         <Post when={data.isPost || data.isPage} />
+
         {/* <Page when={data.isPage} /> */}
       </Switch>
       <Dno />
