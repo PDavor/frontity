@@ -20,7 +20,7 @@ const Navigation = ({ state }) => {
       <Navbar expand={false} sticky="top" className="navigacija">
         <Container>
           <Navbar.Brand>
-            <Link link="/">
+            <Link link="/" className="text-bijela">
               <Image src={Logo} height={70} />
               Općina Đurmanec
             </Link>

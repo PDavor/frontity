@@ -26,7 +26,7 @@ const Dno = ({ state }) => {
               .map((item) => (
                 <React.Fragment key={item.url}>
                   <p>
-                    <Link link={item.url}>
+                    <Link link={item.url} className="text-siva">
                       <i className="fas fa-chevron-right"></i> {item.title}
                     </Link>
                   </p>
@@ -48,7 +48,7 @@ const Dno = ({ state }) => {
               .map((item) => (
                 <React.Fragment key={item.url}>
                   <p>
-                    <Link link={item.url}>
+                    <Link link={item.url} className="text-siva">
                       <i className="fas fa-chevron-right"></i> {item.title}
                     </Link>
                   </p>
@@ -70,7 +70,7 @@ const Dno = ({ state }) => {
               .map((item) => (
                 <React.Fragment key={item.url}>
                   <p>
-                    <Link link={item.url}>
+                    <Link link={item.url} className="text-siva">
                       <i className="fas fa-chevron-right"></i> {item.title}
                     </Link>
                   </p>

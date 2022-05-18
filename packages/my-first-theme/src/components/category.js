@@ -1,20 +1,28 @@
 // File: /packages/my-first-theme/src/components/list.js
 
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "frontity";
 import Link from "@frontity/components/link";
 import Slider from "./Slider";
 import FeaturedMedia from "./featured-media";
 import dayjs from "dayjs";
-const Category = ({ state }) => {
+const Category = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
+  console.log("data", data);
   const category = state.source.category[data.id];
+  console.log("category", category);
   return (
     <>
       <Slider />
       {/* vijesti */}
       <div className="container py-4">
-        <h2 className="mb-4 text-plava font-weight-bold">{category.name}</h2>
+        <h2 className="mb-2 text-plava font-weight-bold">{category.name}</h2>
+        {category.description && (
+          <p
+            className="mb-4 text-plava"
+            dangerouslySetInnerHTML={{ __html: category.description }}
+          />
+        )}
         <div className="row">
           {data.items.map((item) => {
             const post = state.source[item.type][item.id];
@@ -52,6 +60,28 @@ const Category = ({ state }) => {
             );
           })}
         </div>
+        {data.previous && (
+          <button
+            className="button"
+            onClick={() => {
+              actions.router.set(data.previous);
+              window.scrollTo(0, 0);
+            }}
+          >
+            &#171; Natrag
+          </button>
+        )}
+        {data.next && (
+          <button
+            className="button"
+            onClick={() => {
+              actions.router.set(data.next);
+              window.scrollTo(0, 0);
+            }}
+          >
+            Naprijed &#187;
+          </button>
+        )}
       </div>
       {/* <Ostalo />
       <Izdvojeno /> */}

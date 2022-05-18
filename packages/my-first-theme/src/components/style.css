@@ -9,6 +9,12 @@
   --plava-tamna: #0049a1;
   --sekundarna: #4baba4;
 }
+.text-siva {
+  color: var(--siva) !important;
+}
+.text-bijela {
+  color: var(--bijela) !important;
+}
 /* navigacija stilovi */
 .navigacija {
   background-color: var(--plava-tamna);
@@ -85,7 +91,7 @@ p {
 a,
 a:hover,
 a:focus {
-  color: inherit;
+  color: var(--plava);
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -137,4 +143,12 @@ a:focus {
   to {
     opacity: 0;
   }
+}
+
+.button {
+  background: var(--plava-tamna);
+  color: var(--bijela);
+  border: 0;
+  padding: 10px;
+  margin: 10px 10px 10px 0px;
 }
